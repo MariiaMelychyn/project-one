@@ -1,0 +1,95 @@
+.slider {
+    border: 14px solid getColor('yellow-main');
+    border-radius: 50%;
+    overflow: hidden;
+    width: 292px;
+    height: 292px;
+    display: block;
+        box-sizing: content-box;
+
+    @include media-min(desktop){
+        border: 26px solid getColor('yellow-main');
+            width: 528px;
+            height: 528px;
+    }
+
+}
+.slider-line {
+    display: flex;
+    height: 292px;
+    width: 876px;
+    transition: all ease 1s;
+    background-color: F5F5F5;
+    position: relative;
+        transform: translate(0px);
+@include media-min(desktop) {
+            height: 528px;
+            width: 1584px;
+        }
+}
+
+
+.slider-prev,
+.slider-next {
+width: 34px;
+height: 28px;
+object-fit: contain;
+border-radius: 4px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+
+
+@include media-min(desktop) {
+width: 48px;
+height: 40px;
+border-radius: 8px;
+}
+}
+
+.slider-prev {
+left: 0;
+top: 50%;
+transform: translateY(-50%);
+
+}
+
+.slider-next {
+   right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-prev:hover,
+.slider-next:hover,
+.slider-prev:focus,
+.slider-next:focus {
+    fill: getColor('dark-green');
+}
+
+.slider-prev:active,
+.slider-next:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+        fill: getColor('primary-text-color');
+}
+
+.slider-container {
+ 
+    width: 336px;
+    height: 320px;
+    position: relative;
+        padding-left: 8px;
+            padding-right: 8px;
+
+@include media-min(desktop) {
+            width: 598px;
+                height: 580px;
+ }
+@include media-max(tablet) {
+    display: none;
+}
+}
